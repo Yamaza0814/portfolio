@@ -1,0 +1,11 @@
+.work_item_tag {
+  display: inline-block;
+  background-color: #fff;
+  width: 70px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 8px;
+}

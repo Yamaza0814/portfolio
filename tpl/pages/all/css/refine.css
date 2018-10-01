@@ -1,0 +1,48 @@
+.refine_contaier {
+  width: 700px;
+  margin: auto;
+  font-size: 0px;
+}
+
+.refine_btn {
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid #fff;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.work_item:first-child {
+  margin-top: 30px;
+}
+
+input[name='refine_btn'] {
+  display: none;
+}
+input[name='refine_btn']:checked + label {
+  background-color: #fff;
+  color: #000;
+}
+
+#refine_2013:checked ~ .refine_item:not(.year_2013),
+#refine_2014:checked ~ .refine_item:not(.year_2014),
+#refine_2015:checked ~ .refine_item:not(.year_2015),
+#refine_2016:checked ~ .refine_item:not(.year_2016),
+#refine_2017:checked ~ .refine_item:not(.year_2017),
+#refine_2018:checked ~ .refine_item:not(.year_2018),
+#refine_web:checked ~ .refine_item:not(.type_web),
+#refine_banner:checked ~ .refine_item:not(.type_banner),
+#refine_other:checked ~ .refine_item:not(.type_other),
+#refine_html:checked ~ .refine_item:not(.skil_html),
+#refine_css:checked ~ .refine_item:not(.skil_css),
+#refine_js:checked ~ .refine_item:not(.skil_js) {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .refine_contaier {
+    width: 100%;
+  }
+}

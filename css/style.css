@@ -1,0 +1,290 @@
+@import url("./reset.css");
+@import url("../tpl/pages/all/css/refine.css");
+@import url("../tpl/pages/banner/css/modal.css");
+@import url("../tpl/parts/tag/css/tag.css");
+@import url("../tpl/parts/year/css/year_icon.css");
+
+/* タイトルとプロフィールを内包する要素 */
+.page_top {
+  width: 470px;
+  margin: 50px auto;
+}
+
+/* ページのタイトル */
+.page_title {
+  width: 280px;
+  float: right;
+  font-size: 110px;
+  word-wrap: break-word;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* プロフィールを内包する要素 */
+.profile_wrap {
+  padding-top: 140px;
+}
+
+/* プロフィールタイトル */
+.profile_title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* プロフィールの経歴に対するスタイル */
+.profile_career {
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* 作品集を内包する要素 */
+.work_container {
+  background-color: #242529;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* 作品集のタイトル */
+.work_title {
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+/* 作品集のタブを内包する要素 */
+.work_menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 作品集のメニューと矢印を内包する要素 */
+.work_menu_wrap {
+  width: 700px;
+  margin: auto;
+}
+
+/* 作品集のメニュー */
+.work_list {
+  width: 175px;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  cursor: pointer;
+}
+
+/* 作品集のメニューの最初と最後の要素だけボーダーを削除 */
+.work_list:first-child,
+.work_list:last-child {
+  border: 0px;
+}
+
+/* メニューの矢印 */
+.work_list_arrow {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.work_list_arrow::before {
+  display: block;
+  content: '';
+  width: 60px;
+  height: 60px;
+  border: 1px solid #396DB0;
+  border-radius: 50%;
+}
+
+.work_list_arrow::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 0px;
+  border-right: solid 1px #396DB0;
+  border-bottom: solid 1px #396DB0;
+  transform: rotate(45deg);
+  top: 20px;
+  left: 24px;
+}
+
+/* 作品のコンテンツを内包する要素 */
+.work_item {
+  display: flex;
+  width: 700px;
+  min-height: 150px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+/* 作品のイメージ画像 */
+.work_item_image {
+  width: 400px;
+  background-color: #000;
+}
+
+.work_item_image img{
+  width: 100%;
+}
+
+/* 作品の説明文 */
+.work_item_info {
+  position: relative;
+  width: 300px;
+  padding: 16px;
+}
+
+.frame_2013 {
+  background-color: #385D6A;
+}
+
+.frame_2014 {
+  background-color: #38506A;
+}
+
+.frame_2015 {
+  background-color: #AD833E;
+}
+
+.frame_2016 {
+  background-color: #6A3852;
+}
+
+.frame_2017 {
+  background-color: #386A4E;
+}
+
+.frame_2018 {
+  background-color: #38386A;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[name='tab_btn']:checked + label {
+  background-color: #fff;
+  color: #000;
+}
+
+
+.tab_panel {
+  width:100%;
+  padding-top: 30px;
+  display:none;
+}
+
+#web_work:checked ~ .panel_area #web_work_item,
+#banner_work:checked ~ .panel_area #banner_work_item,
+#other_work:checked ~ .panel_area #other_work_item,
+#all_work:checked ~ .panel_area #all_work_item  {
+  display: block;
+}
+
+.work_item_info_title,
+.work_item_info_type,
+.web_work_item_link {
+  color: #fff;
+}
+
+.work_item_info_title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.work_item_info_type {
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.web_work_item_link {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  border: 2px solid #fff;
+  width: 120px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.mypr_list {
+  width: 600px;
+  margin: auto;
+}
+
+.pr_text {
+  font-size: 14px;
+}
+
+.mypr_container {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.mypr_title {
+  text-align: center;
+  color: #000;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.footer_container {
+  background-color: #242529;
+  height: 60px;
+}
+
+.copy_copyright {
+  text-align: center;
+  color: #fff;
+  line-height: 60px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .page_title {
+    width: 210px;
+    margin: 50px auto;
+    font-size: 80px;
+    float: none;
+  }
+  .page_top {
+    width: 100%;
+    margin: 50px auto;
+  }
+  .profile_wrap {
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-top: 0px;
+  }
+  .work_menu_wrap {
+    width: 100%;
+  }
+  .work_item {
+    display: block;
+    width: 100%;
+  }
+  .work_item_info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .work_item_image {
+    width: 100%;
+  }
+  .mypr_list {
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .web_work_item_link {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+}

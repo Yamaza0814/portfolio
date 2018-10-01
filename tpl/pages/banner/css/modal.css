@@ -1,0 +1,69 @@
+.myModal_popUp,
+input[name="myModal_switch"],
+#myModal_open + label ~ label {
+  display: none;
+}
+#myModal_open + label,
+#myModal_close-button + label {
+  cursor: pointer;
+}
+
+#myModal_open:checked + label ~ .myModal_popUp {
+  background: #fff;
+  display: block;
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  z-index: 1;
+}
+
+
+#myModal_open:checked + label + #myModal_close-overlay + label {
+  background: rgba(0, 0, 0, 0.70);
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#myModal_open:checked ~ #myModal_close-button + label {
+  display: block;
+  background: #000;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  width: 150px;
+  height: 40px;
+  position: fixed;
+  bottom: 20%;
+  left: 50%;
+  margin-left: -75px;
+  color: #fff;
+  z-index: 2;
+}
+
+.popimg {
+  width: 100%;
+}
+
+.banner_info {
+  word-wrap: break-word;
+  padding: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  #myModal_open:checked + label ~ .myModal_popUp {
+    width: 100%;
+  }
+  .popimg {
+    height: auto;
+  }
+}
